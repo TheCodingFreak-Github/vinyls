@@ -1,0 +1,36 @@
+.vinyles{
+  position: absolute;
+  background: white;
+  transition:  cubic-bezier(.4,.33,.47,.95) 0.5s;
+  left: 50%;
+  &:nth-child(18){
+    cursor: pointer;
+  }
+  &.animEnd{
+    opacity: 0;
+    animation: animEnd 1s linear;
+  }
+  span{
+    position: absolute;
+    top: 0.2rem;
+    left: 0.5rem;
+    z-index: 99;
+    font-size: 0.4rem;
+    font-weight: 600;
+    color: rgb(12, 12, 12);
+    text-transform: uppercase;
+  }
+  img{
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: unset;
+    opacity: 0.8;
+  }
+}
+
+@keyframes animEnd {
+  0%{opacity: 1;margin-top: 0;}
+  98%{opacity: 1;}
+  99%{opacity: 0;}
+  100%{margin-top: 500px;}
+}
